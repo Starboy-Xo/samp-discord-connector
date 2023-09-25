@@ -26,6 +26,8 @@ if(UNIX)
 endif()
 
 # -- CONAN
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
 include(libs/cmake-conan/conan.cmake)
 function(add_conan_lib pkg_name conan_pkg)
 	conan_check(REQUIRED)
